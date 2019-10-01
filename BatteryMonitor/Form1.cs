@@ -16,13 +16,11 @@ namespace BatteryMonitor
     public partial class Form1 : Form
     {
         System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+		
         public Form1()
         {
             InitializeComponent();
-            this.Text ="Battery Status: " + GetBatteryStatus().ToString() + "%";
-            label3.Text = GetBatteryStatus().ToString() + "%";
-            label4.Text = GetPowerSource();
-
+            Refresh();
 
             this.myTimer.Interval = 100;
             this.myTimer.Tick += new System.EventHandler(myTimer_Tick);
@@ -33,8 +31,6 @@ namespace BatteryMonitor
         private void myTimer_Tick(object sender, EventArgs e){
             Refresh();
         }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -79,5 +75,6 @@ namespace BatteryMonitor
         {
             Refresh();
         }
+        
     }
 }
