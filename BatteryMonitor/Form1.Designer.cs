@@ -37,6 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Language = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -132,11 +133,22 @@
             this.label7.Text = "Jordan Pierre";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // Language
+            // 
+            this.Language.DisplayMember = "English";
+            this.Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Language.FormattingEnabled = true;
+            this.Language.Location = new System.Drawing.Point(390, 92);
+            this.Language.Name = "Language";
+            this.Language.Size = new System.Drawing.Size(121, 21);
+            this.Language.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 400);
+            this.ClientSize = new System.Drawing.Size(598, 455);
+            this.Controls.Add(this.Language);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -164,6 +176,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox Language;
     }
 }
 
