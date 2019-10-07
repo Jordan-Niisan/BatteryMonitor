@@ -83,6 +83,5 @@ namespace BatteryMonitor
         {
             Refresh();
         }
-        
     }
 }
