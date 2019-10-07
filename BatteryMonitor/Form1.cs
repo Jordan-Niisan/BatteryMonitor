@@ -83,5 +83,15 @@ namespace BatteryMonitor
         {
             Refresh();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            if (label7.Text.Equals("Jordan Pierre"))
+                label7.Text = "Jordan";
+            else if (label7.Text.Equals("Jordan"))
+                label7.Text = "Pierre";
+            else if (label7.Text.Equals("Pierre"))
+                label7.Text = "Jordan Pierre";
+        }
     }
 }
