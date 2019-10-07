@@ -42,6 +42,7 @@ namespace BatteryMonitor
             this.Text = "Battery Status: " + GetBatteryStatus().ToString() + "%";
             label3.Text = GetBatteryStatus().ToString() + "%";
             label4.Text = GetPowerSource();
+            label6.Text = GetTime();
         }
 
         public String GetPowerSource()
@@ -63,6 +64,13 @@ namespace BatteryMonitor
             return strPowerLineStatus;
         }
 
+        public String GetTime()
+        {
+            string strtime = "Default";
+            strtime = DateTime.Now.ToString();
+            return strtime;
+        }
+
         public float GetBatteryStatus()
         {
             float batterylife;
@@ -75,6 +83,15 @@ namespace BatteryMonitor
         {
             Refresh();
         }
-        
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            if (label7.Text.Equals("Jordan Pierre"))
+                label7.Text = "Jordan";
+            else if (label7.Text.Equals("Jordan"))
+                label7.Text = "Pierre";
+            else if (label7.Text.Equals("Pierre"))
+                label7.Text = "Jordan Pierre";
+        }
     }
 }
