@@ -42,6 +42,7 @@ namespace BatteryMonitor
             this.Text = "Battery Status: " + GetBatteryStatus().ToString() + "%";
             label3.Text = GetBatteryStatus().ToString() + "%";
             label4.Text = GetPowerSource();
+            label6.Text = GetTime();
         }
 
         public String GetPowerSource()
@@ -61,6 +62,13 @@ namespace BatteryMonitor
                     break;
             }
             return strPowerLineStatus;
+        }
+
+        public String GetTime()
+        {
+            string strtime = "Default";
+            strtime = DateTime.Now.ToString();
+            return strtime;
         }
 
         public float GetBatteryStatus()
